@@ -50,6 +50,9 @@ Version History
   formally support free-threaded builds. (#276)
 * The C and Rust backends now declare the GIL as unused.
 * The `pythoncapi_compat.h` file has been upgraded to the latest version. (#278)
+* `setup.py` now depends on `packaging` and uses `packaging.version.Version` for
+  version comparisons. This removes some deprecation warnings from usage of
+  legacy distutils `Version` classes.
 
 0.24.0 (released 2025-08-17)
 ============================
