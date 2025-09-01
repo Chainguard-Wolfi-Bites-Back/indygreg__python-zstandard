@@ -49,6 +49,7 @@ Version History
 * Added CI coverage for free-threaded CPython 3.13 and 3.14. We do not yet
   formally support free-threaded builds. (#276)
 * The C and Rust backends now declare the GIL as unused.
+* The `pythoncapi_compat.h` file has been upgraded to the latest version. (#278)
 
 0.24.0 (released 2025-08-17)
 ============================
