@@ -41,6 +41,12 @@ C API, including multiple streaming interfaces, precomputed dictionaries,
 advanced tuning, buffer-protocol / zero-copy support, inspection tools, and CFFI 
 or C backend options—making it the most feature-rich binding available.
 
+Python 3.14 introduced zstd support into the standard library via the
+[compression.zstd](https://docs.python.org/3.14/library/compression.zstd.html)
+module. The standard library has less features than this package. But they
+are available and convenient to use. So if it works for you, the standard
+library is probably the easiest way to use zstandard compression in Python
+going forward.
 
 Performance
 ===========
