@@ -49,10 +49,10 @@ Version History
 * Added CI coverage for free-threaded CPython 3.13 and 3.14. We do not yet
   formally support free-threaded builds. (#276)
 * The C and Rust backends now declare the GIL as unused.
-* The `pythoncapi_compat.h` file has been upgraded to the latest version. (#278)
-* `setup.py` now depends on `packaging` and uses `packaging.version.Version` for
-  version comparisons. This removes some deprecation warnings from usage of
-  legacy distutils `Version` classes.
+* The ``pythoncapi_compat.h`` file has been upgraded to the latest version. (#278)
+* ``setup.py`` now depends on ``packaging`` and uses ``packaging.version.Version``
+  for version comparisons. This removes some deprecation warnings from usage of
+  legacy distutils ``Version`` classes.
 * Relax run-time libzstd version checking in C extension from exactly 1.5.7
   to >=1.5.6. (#254, #267)
 
