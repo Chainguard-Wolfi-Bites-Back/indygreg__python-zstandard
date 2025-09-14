@@ -65,10 +65,6 @@ All Install Arguments
    Attempt to link against the zstd library present on the system instead
    of the version distributed with the extension.
 
-   The Python extension only supports linking against a specific version of
-   zstd. So if the system version differs from what is expected, a build
-   or runtime error will result.
-
 ``--warning-as-errors``
    Treat all compiler warnings as errors.
 
@@ -121,6 +117,11 @@ be specified via the ``ZSTD_EXTRA_COMPILER_ARGS`` environment variable. e.g.
 against. For best results, point this package at the exact same version of
 ``libzstd`` that it bundles. See the bundled ``zstd/zstd.h`` or
 ``zstd/zstd.c`` for which version that is.
+
+A build or run-time error can occur if the version of ``libzstd`` being built
+against does not exactly match our bundled version. Historically, we required
+an exact version match. But in September 2025 we relaxed this constraint to
+only require a minimum version match.
 
 When linking against an external ``libzstd``, not all package features may be
 available. Notably, the ``multi_compress_to_buffer()`` and

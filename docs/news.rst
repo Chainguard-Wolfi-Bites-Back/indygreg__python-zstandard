@@ -53,6 +53,8 @@ Version History
 * `setup.py` now depends on `packaging` and uses `packaging.version.Version` for
   version comparisons. This removes some deprecation warnings from usage of
   legacy distutils `Version` classes.
+* Relax run-time libzstd version checking in C extension from exactly 1.5.7
+  to >=1.5.6. (#254, #267)
 
 0.24.0 (released 2025-08-17)
 ============================
