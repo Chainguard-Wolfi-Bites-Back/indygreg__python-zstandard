@@ -4,8 +4,8 @@
 Version History
 ===============
 
-0.25.0 (not yet released)
-=========================
+0.25.0 (released 2025-09-14)
+============================
 
 * PyO3 Rust created upgraded from 0.24 to 0.25. (#273)
 * We now use ``Py_REFCNT(obj)`` instead of accessing ``(*obj)->ob_refcnt`` directly.
