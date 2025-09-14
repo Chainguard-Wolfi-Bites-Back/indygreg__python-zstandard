@@ -85,8 +85,9 @@
  * header and the script 'combine.sh' combines the whole zstd source code
  * in a single file.
  */
-#if (defined(__linux__) && !defined(__ANDROID__)) || defined(__CYGWIN__) || defined(__MSYS__)
-#ifndef _GNU_SOURCE
+#if defined(__linux) || defined(__linux__) || defined(linux) || defined(__gnu_linux__) || \
+    defined(__CYGWIN__) || defined(__MSYS__)
+#if !defined(_GNU_SOURCE) && !defined(__ANDROID__) /* NDK doesn't ship qsort_r(). */
 #define _GNU_SOURCE
 #endif
 #endif
